@@ -1,0 +1,113 @@
+&&&& RUNNING TensorRT.trtexec [TensorRT v8203] # trtexec --onnx=model.onnx --minShapes=x:0:1x1x28x28 --optShapes=x:0:4x1x28x28 --maxShapes=x:0:16x1x28x28 --workspace=1024 --saveEngine=model-FP16.plan --shapes=x:0:4x1x28x28 --verbose --fp16
+[05/07/2022-06:13:09] [I] === Model Options ===
+[05/07/2022-06:13:09] [I] Format: ONNX
+[05/07/2022-06:13:09] [I] Model: model.onnx
+[05/07/2022-06:13:09] [I] Output:
+[05/07/2022-06:13:09] [I] === Build Options ===
+[05/07/2022-06:13:09] [I] Max batch: explicit batch
+[05/07/2022-06:13:09] [I] Workspace: 1024 MiB
+[05/07/2022-06:13:09] [I] minTiming: 1
+[05/07/2022-06:13:09] [I] avgTiming: 8
+[05/07/2022-06:13:09] [I] Precision: FP32+FP16
+[05/07/2022-06:13:09] [I] Calibration: 
+[05/07/2022-06:13:09] [I] Refit: Disabled
+[05/07/2022-06:13:09] [I] Sparsity: Disabled
+[05/07/2022-06:13:09] [I] Safe mode: Disabled
+[05/07/2022-06:13:09] [I] DirectIO mode: Disabled
+[05/07/2022-06:13:09] [I] Restricted mode: Disabled
+[05/07/2022-06:13:09] [I] Save engine: model-FP16.plan
+[05/07/2022-06:13:09] [I] Load engine: 
+[05/07/2022-06:13:09] [I] Profiling verbosity: 0
+[05/07/2022-06:13:09] [I] Tactic sources: Using default tactic sources
+[05/07/2022-06:13:09] [I] timingCacheMode: local
+[05/07/2022-06:13:09] [I] timingCacheFile: 
+[05/07/2022-06:13:09] [I] Input(s)s format: fp32:CHW
+[05/07/2022-06:13:09] [I] Output(s)s format: fp32:CHW
+[05/07/2022-06:13:09] [I] Input build shape: x:0=1x1x28x28+4x1x28x28+16x1x28x28
+[05/07/2022-06:13:09] [I] Input calibration shapes: model
+[05/07/2022-06:13:09] [I] === System Options ===
+[05/07/2022-06:13:09] [I] Device: 0
+[05/07/2022-06:13:09] [I] DLACore: 
+[05/07/2022-06:13:09] [I] Plugins:
+[05/07/2022-06:13:09] [I] === Inference Options ===
+[05/07/2022-06:13:09] [I] Batch: Explicit
+[05/07/2022-06:13:09] [I] Input inference shape: x:0=4x1x28x28
+[05/07/2022-06:13:09] [I] Iterations: 10
+[05/07/2022-06:13:09] [I] Duration: 3s (+ 200ms warm up)
+[05/07/2022-06:13:09] [I] Sleep time: 0ms
+[05/07/2022-06:13:09] [I] Idle time: 0ms
+[05/07/2022-06:13:09] [I] Streams: 1
+[05/07/2022-06:13:09] [I] ExposeDMA: Disabled
+[05/07/2022-06:13:09] [I] Data transfers: Enabled
+[05/07/2022-06:13:09] [I] Spin-wait: Disabled
+[05/07/2022-06:13:09] [I] Multithreading: Disabled
+[05/07/2022-06:13:09] [I] CUDA Graph: Disabled
+[05/07/2022-06:13:09] [I] Separate profiling: Disabled
+[05/07/2022-06:13:09] [I] Time Deserialize: Disabled
+[05/07/2022-06:13:09] [I] Time Refit: Disabled
+[05/07/2022-06:13:09] [I] Skip inference: Disabled
+[05/07/2022-06:13:09] [I] Inputs:
+[05/07/2022-06:13:09] [I] === Reporting Options ===
+[05/07/2022-06:13:09] [I] Verbose: Enabled
+[05/07/2022-06:13:09] [I] Averages: 10 inferences
+[05/07/2022-06:13:09] [I] Percentile: 99
+[05/07/2022-06:13:09] [I] Dump refittable layers:Disabled
+[05/07/2022-06:13:09] [I] Dump output: Disabled
+[05/07/2022-06:13:09] [I] Profile: Disabled
+[05/07/2022-06:13:09] [I] Export timing to JSON file: 
+[05/07/2022-06:13:09] [I] Export output to JSON file: 
+[05/07/2022-06:13:09] [I] Export profile to JSON file: 
+[05/07/2022-06:13:09] [I] 
+[05/07/2022-06:13:09] [I] === Device Information ===
+[05/07/2022-06:13:09] [I] Selected Device: NVIDIA GeForce GTX 1070
+[05/07/2022-06:13:09] [I] Compute Capability: 6.1
+[05/07/2022-06:13:09] [I] SMs: 16
+[05/07/2022-06:13:09] [I] Compute Clock Rate: 1.645 GHz
+[05/07/2022-06:13:09] [I] Device Global Memory: 8111 MiB
+[05/07/2022-06:13:09] [I] Shared Memory per SM: 96 KiB
+[05/07/2022-06:13:09] [I] Memory Bus Width: 256 bits (ECC disabled)
+[05/07/2022-06:13:09] [I] Memory Clock Rate: 4.004 GHz
+[05/07/2022-06:13:09] [I] 
+[05/07/2022-06:13:09] [I] TensorRT version: 8.2.3
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::BatchTilePlugin_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::BatchedNMS_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::BatchedNMSDynamic_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::CoordConvAC version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::CropAndResize version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::CropAndResizeDynamic version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::DecodeBbox3DPlugin version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::DetectionLayer_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::EfficientNMS_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::EfficientNMS_ONNX_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::EfficientNMS_TFTRT_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::FlattenConcat_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::GenerateDetection_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::GridAnchor_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::GridAnchorRect_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::InstanceNormalization_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::LReLU_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::MultilevelCropAndResize_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::MultilevelProposeROI_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::NMS_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::NMSDynamic_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::Normalize_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::PillarScatterPlugin version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::PriorBox_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::ProposalLayer_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::Proposal version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::ProposalDynamic version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::PyramidROIAlign_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::Region_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::Reorg_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::ResizeNearest_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::RPROI_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::ScatterND version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::SpecialSlice_TRT version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::Split version 1
+[05/07/2022-06:13:09] [V] [TRT] Registered plugin creator - ::VoxelGeneratorPlugin version 1
+[05/07/2022-06:13:10] [I] [TRT] [MemUsageChange] Init CUDA: CPU +177, GPU +0, now: CPU 189, GPU 682 (MiB)
+[05/07/2022-06:13:10] [I] [TRT] [MemUsageSnapshot] Begin constructing builder kernel library: CPU 189 MiB, GPU 682 MiB
+[05/07/2022-06:13:10] [I] [TRT] [MemUsageSnapshot] End constructing builder kernel library: CPU 252 MiB, GPU 682 MiB
+[05/07/2022-06:13:10] [I] Start parsing network model
+[05/07/2022-06:13:10] [I] Finish parsing network model
+&&&& FAILED TensorRT.trtexec [TensorRT v8203] # trtexec --onnx=model.onnx --minShapes=x:0:1x1x28x28 --optShapes=x:0:4x1x28x28 --maxShapes=x:0:16x1x28x28 --workspace=1024 --saveEngine=model-FP16.plan --shapes=x:0:4x1x28x28 --verbose --fp16

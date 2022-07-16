@@ -1,0 +1,179 @@
+{
+    "replay": {
+        "Conv-1 + ReLU-2": {
+            "implementation": -2147483638,
+            "tactic": 7144526460361122478,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "MaxPool-3": {
+            "implementation": -2147483616,
+            "tactic": 6226177,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "Conv-4 + ReLU-5": {
+            "implementation": -2147483638,
+            "tactic": -9153228964338181824,
+            "inputs": [
+                [
+                    "TensorFormat.HWC",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.HWC",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "MaxPool-6": {
+            "implementation": -2147483616,
+            "tactic": 6226177,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "Transpose-7 + Reshape-7 + (Unnamed Layer* 14) [Shuffle]": {
+            "implementation": -2147483634,
+            "tactic": 0,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "MatMul-9 + constant1024 + (Unnamed Layer* 21) [Shuffle] + unsqueeze_node_after_constant1024 + (Unnamed Layer* 21) [Shuffle] + Add-10 + ReLU-11": {
+            "implementation": -2147483603,
+            "tactic": 0,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "MatMul-12 + constant10 + (Unnamed Layer* 37) [Shuffle] + unsqueeze_node_after_constant10 + (Unnamed Layer* 37) [Shuffle] + Add-13": {
+            "implementation": -2147483603,
+            "tactic": 0,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "copied_squeeze_after_Add-13": {
+            "implementation": -2147483634,
+            "tactic": 0,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "Softmax-14 + ArgMax-15": {
+            "implementation": -2147483610,
+            "tactic": 1001,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.FLOAT"
+                ],
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.INT32"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        },
+        "(Unnamed Layer* 52) [Shuffle]": {
+            "implementation": -2147483634,
+            "tactic": 0,
+            "inputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.INT32"
+                ]
+            ],
+            "outputs": [
+                [
+                    "TensorFormat.LINEAR",
+                    "DataType.INT32"
+                ]
+            ],
+            "polygraphy_class": "Algorithm"
+        }
+    },
+    "polygraphy_class": "TacticReplayData"
+}
